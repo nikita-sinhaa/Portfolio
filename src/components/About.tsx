@@ -18,7 +18,7 @@ const About = () => {
       icon: <Cog className="h-6 w-6" />,
       title: "Hardware Integration",
       description: "PCB design, sensor fusion, and communication protocols"
-    }
+    },
     {
       icon: <Shield className="h-6 w-6" />,
       title: "Security & Safety",
