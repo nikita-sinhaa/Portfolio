@@ -1,87 +1,98 @@
-import React from "react";
-import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Cpu, Zap, Cog, Shield } from "lucide-react";
 
 const About = () => {
+  const highlights = [
+    {
+      icon: <Cpu className="h-6 w-6" />,
+      title: "Microcontroller Expert",
+      description: "ARM Cortex-M, ESP32, STM32, and Arduino platforms"
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Real-time Systems",
+      description: "RTOS, interrupt handling, and time-critical applications"
+    },
+    {
+      icon: <Cog className="h-6 w-6" />,
+      title: "Hardware Integration",
+      description: "PCB design, sensor fusion, and communication protocols"
+    }
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Security & Safety",
+      description: "Secure boot, encryption, and safety-critical systems"
+    }
+  ];
+
+  const technologies = [
+    "C/C++", "Python", "Rust", "ARM Assembly", "FreeRTOS", "Zephyr OS",
+    "I2C", "SPI", "UART", "CAN Bus", "Ethernet", "WiFi", "Bluetooth",
+    "KiCad", "Altium Designer", "MATLAB/Simulink", "Git", "JIRA", "Docker"
+  ];
+
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto text-white space-y-20">
-      {/* Hero */}
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-blue-500">Beyond Firmware</h1>
-        <h2 className="text-2xl font-semibold mt-2">Who is Nikita?</h2>
-        <div className="mt-8 flex flex-col md:flex-row items-center gap-6 justify-center">
-          <div className="w-64 h-64 relative rounded-xl shadow-lg overflow-hidden">
-            <Image src="/nikita/nikita-1.jpeg" alt="Nikita portrait" layout="fill" objectFit="cover" />
-          </div>
-          <p className="text-lg max-w-xl text-left">
-            Embedded engineer, sensor enthusiast, and a proud process control fanatic. Storyteller in code and beyond. I build real-time systems that think fast and run clean.
-            <br /><br />
-            Outside the lab, you’ll find me <span className="text-blue-400">writing</span>, <span className="text-blue-400">exploring new places</span>,
-            <span className="text-blue-400"> cooking something spicy</span>, or <span className="text-blue-400">clicking photographs of the most random building around.</span>
+    <section id="about" className="py-20 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="text-4xl font-bold mb-4 text-gradient">
+            About Me
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in stagger-1">
+            Passionate embedded systems engineer with 8+ years of experience delivering 
+            innovative solutions across automotive, IoT, and industrial automation sectors.
           </p>
         </div>
-      </div>
 
-      {/* Journey */}
-      <div>
-        <h2 className="text-3xl font-semibold text-center text-blue-500 mb-10">My Firmware Journey 💡</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="border border-blue-500 rounded-lg p-6 backdrop-blur-lg bg-white/5">
-            <h4 className="text-xl font-bold text-blue-400 mb-2">The Spark</h4>
-            <p>
-              Surrounded by mechanical and electrical engineers since childhood, I was sketching circuits and taking apart toys before I learned algebra. By middle school, I knew one thing: I’d become an <span className="text-blue-400">engineer</span>.
+        <div className="grid lg:grid-cols-2 gap-12 items-start mb-16 animate-slide-up">
+          <div className="space-y-6 animate-slide-in-left">
+            <p className="text-foreground/90 leading-relaxed">
+              I specialize in bridging the gap between hardware and software, creating efficient 
+              and reliable embedded systems that power the devices we use every day. My expertise 
+              spans from low-level firmware development to system architecture design.
+            </p>
+            <p className="text-foreground/90 leading-relaxed">
+              With a strong foundation in electrical engineering and computer science, I've led 
+              cross-functional teams to deliver products that meet strict performance, power, 
+              and safety requirements. I'm passionate about clean code, robust testing, and 
+              continuous learning in this rapidly evolving field.
             </p>
           </div>
-          <div className="border border-blue-500 rounded-lg p-6 backdrop-blur-lg bg-white/5">
-            <h4 className="text-xl font-bold text-blue-400 mb-2">Booting into Reality</h4>
-            <p>
-              My work at <span className="font-bold">Kirloskar</span> and <span className="font-bold">Kohler</span> brought me face to face with the real challenges of automation. That’s when I discovered the power of firmware in the real world.
-            </p>
-          </div>
-          <div className="border border-blue-500 rounded-lg p-6 backdrop-blur-lg bg-white/5">
-            <h4 className="text-xl font-bold text-blue-400 mb-2">Where it All Intersected</h4>
-            <p>
-              At Manipal Institute of Technology, I chose Instrumentation & Control Engineering. A perfect blend of mechanical logic and electrical depth. This is where I fell in love with <span className="text-blue-400">process control, PLCs, and signal processing.</span>
-            </p>
-          </div>
-          <div className="border border-blue-500 rounded-lg p-6 backdrop-blur-lg bg-white/5">
-            <h4 className="text-xl font-bold text-blue-400 mb-2">Talking to Hardware</h4>
-            <p>
-              Today, I build <span className="text-blue-400">real-time systems</span> that listen, think, and respond. I write code that speaks directly to machines with <span className="text-blue-400">precision, intent, and zero fluff.</span>
-            </p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 animate-slide-in-right">
+            {highlights.map((item, index) => (
+              <Card 
+                key={index} 
+                className={`bg-card/50 border-border hover:bg-card/80 transition-all duration-300 hover:shadow-card hover-scale animate-scale-in stagger-${index + 1}`}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-primary/20 rounded-lg text-primary animate-glow-pulse">
+                      {item.icon}
+                    </div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Goals */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="text-left max-w-xl">
-          <h2 className="text-3xl font-semibold text-blue-500 mb-4">My Goals 🚀</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>💼 Land my dream job where I could explore my knowledge to the fullest.</li>
-            <li>🧘 Stay grounded and growing: physically stronger, mentally sharper.</li>
-            <li>🛠 Build a real-time system that genuinely helps people.</li>
-            <li>🤝 Be part of impactful work at the intersection of humanity and technology.</li>
-            <li>🌍 Travel the world’s national parks and collect stories from every corner.</li>
-            <li>🏡 Build my parents’ dream home nestled in the quiet of the hills.</li>
-          </ul>
-        </div>
-        <div className="w-72 h-72 relative rounded-xl shadow-lg overflow-hidden">
-          <Image src="/nikita/nikita-2.jpg" alt="Nikita with dog" layout="fill" objectFit="cover" />
-        </div>
-      </div>
-
-      {/* Photography */}
-      <div>
-        <h3 className="text-3xl font-semibold text-blue-500 mb-4 text-center">Things That Attract Me 💚</h3>
-        <p className="text-center max-w-2xl mx-auto text-md text-gray-300 mb-6 italic">
-          Photography is how I see things just quietly, carefully, and sometimes differently 👀📷. It’s not about taking photos. It’s about noticing what’s worth remembering ✨🖼️
-        </p>
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-          {[3, 4, 5, 6].map((num, i) => (
-            <div key={i} className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-              <Image src={`/nikita/nikita-${num}.jpeg`} alt={`Captured moment ${i + 1}`} layout="fill" objectFit="cover" />
-            </div>
-          ))}
+        <div className="animate-fade-in stagger-2">
+          <h3 className="text-2xl font-semibold mb-6 text-center">Technologies & Tools</h3>
+          <div className="flex flex-wrap justify-center gap-3">
+            {technologies.map((tech, index) => (
+              <Badge
+                key={index}
+                variant="secondary"
+                className={`px-4 py-2 text-sm hover:bg-secondary/80 hover:shadow-subtle transition-all duration-300 hover-scale animate-fade-in stagger-${(index % 4) + 1}`}
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
         </div>
       </div>
     </section>
