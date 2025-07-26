@@ -1,11 +1,11 @@
 i
 import React from "react";
-import nikita1 from "@/assets/nikita-1.png";
-import nikita2 from "@/assets/nikita-2.png";
-import nikita3 from "@/assets/nikita-3.png";
-import nikita4 from "@/assets/nikita-4.png";
-import nikita5 from "@/assets/nikita-5.png";
-import nikita6 from "@/assets/nikita-6.png";
+import nikita1 from "@/assets/nikita-1.jpeg";
+import nikita2 from "@/assets/nikita-2.jpg";
+import nikita3 from "@/assets/nikita-3.jpg";
+import nikita4 from "@/assets/nikita-4.jpeg";
+import nikita5 from "@/assets/nikita-5.jpeg";
+import nikita6 from "@/assets/nikita-6.jpeg";
 
 const About = () => {
   return (
