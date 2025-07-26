@@ -21,14 +21,13 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="space-y-6">
           <h1 className="text-5xl md:text-7xl font-bold text-gradient animate-fade-in">
-            Alex Chen
+            Nikita Sinha
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground font-light animate-fade-in stagger-1">
-            Embedded Systems Engineer
+            Embedded Engineer
           </h2>
           <p className="text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto leading-relaxed animate-fade-in stagger-2">
-            Designing intelligent embedded solutions for IoT, automation, and next-generation devices. 
-            Specialized in firmware development, real-time systems, and hardware-software integration.
+           Embeeded Engineer who is turning real time challenges into real world solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-slide-up stagger-3">
