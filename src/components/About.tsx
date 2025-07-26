@@ -2,29 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Cpu, Zap, Cog, Shield } from "lucide-react";
 
-const About = () => {
-  const highlights = [
-    {
-      icon: <Cpu className="h-6 w-6" />,
-      title: "Microcontroller Expert",
-      description: "ARM Cortex-M, ESP32, STM32, and Arduino platforms"
-    },
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Real-time Systems",
-      description: "RTOS, interrupt handling, and time-critical applications"
-    },
-    {
-      icon: <Cog className="h-6 w-6" />,
-      title: "Hardware Integration",
-      description: "PCB design, sensor fusion, and communication protocols"
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Security & Safety",
-      description: "Secure boot, encryption, and safety-critical systems"
-    }
-  ];
+
 
   const technologies = [
     "C/C++", "Python", "Rust", "ARM Assembly", "FreeRTOS", "Zephyr OS",
