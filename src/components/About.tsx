@@ -1,13 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import nikita1 from "@/assets/nikita-1.jpeg";
-import nikita2 from "@/assets/nikita-2.jpg";
-import nikita3 from "@/assets/nikita-3.jpg";
-import nikita4 from "@/assets/nikita-4.jpeg";
-import nikita5 from "@/assets/nikita-5.jpeg";
-import nikita6 from "@/assets/nikita-6.jpeg";
-
 const About = () => {
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto text-white space-y-20">
@@ -17,7 +10,7 @@ const About = () => {
         <h2 className="text-2xl font-semibold mt-2">Who is Nikita?</h2>
         <div className="mt-8 flex flex-col md:flex-row items-center gap-6 justify-center">
           <div className="w-64 h-64 relative rounded-xl shadow-lg overflow-hidden">
-            <Image src={nikita1} alt="Nikita portrait" layout="fill" objectFit="cover" />
+            <Image src="/nikita/nikita-1.jpeg" alt="Nikita portrait" layout="fill" objectFit="cover" />
           </div>
           <p className="text-lg max-w-xl text-left">
             Embedded engineer, sensor enthusiast, and a proud process control fanatic. Storyteller in code and beyond. I build real-time systems that think fast and run clean.
@@ -73,7 +66,7 @@ const About = () => {
           </ul>
         </div>
         <div className="w-72 h-72 relative rounded-xl shadow-lg overflow-hidden">
-          <Image src={nikita2} alt="Nikita with dog" layout="fill" objectFit="cover" />
+          <Image src="/nikita/nikita-2.jpg" alt="Nikita with dog" layout="fill" objectFit="cover" />
         </div>
       </div>
 
@@ -84,9 +77,9 @@ const About = () => {
           Photography is how I see things just quietly, carefully, and sometimes differently 👀📷. It’s not about taking photos. It’s about noticing what’s worth remembering ✨🖼️
         </p>
         <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
-          {[nikita3, nikita4, nikita5, nikita6].map((img, i) => (
+          {[3, 4, 5, 6].map((num, i) => (
             <div key={i} className="relative w-full h-64 rounded-lg shadow-md overflow-hidden">
-              <Image src={img} alt={`Captured moment ${i + 1}`} layout="fill" objectFit="cover" />
+              <Image src={`/nikita/nikita-${num}.jpeg`} alt={`Captured moment ${i + 1}`} layout="fill" objectFit="cover" />
             </div>
           ))}
         </div>
@@ -96,4 +89,3 @@ const About = () => {
 };
 
 export default About;
-
